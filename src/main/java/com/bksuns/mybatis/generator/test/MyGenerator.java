@@ -43,7 +43,7 @@ import java.util.Date;
 		// 类信息：类名、表名、类说明
 		String CLASSNAME = "Emp1";
 		String TABLE = "emp1";
-		String CLASSCOMMENT = "平台申请";
+		String CLASSCOMMENT = "生成测试";
 
 		//是否生成 toString HashCode equals方法
 		Boolean isOther = true;
