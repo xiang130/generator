@@ -12,7 +12,7 @@ com.bksuns.mybatis.generator.test.MyGenerator
 ``` java
 		// 基础信息：项目名、作者、版本
 		String PROJECT = "**-manage";
-		String AUTHOR = "wujp";
+		String AUTHOR = "xiang";
 		String VERSION = "V1.0";
 
 		// 数据库连接信息：连接URL、用户名、秘密、数据库名
