@@ -12,7 +12,7 @@ com.bksuns.mybatis.generator.test.MyGenerator
 
 ``` java
 		// 基础信息：项目名、作者、版本
-		String PROJECT = "wallet-manage";
+		String PROJECT = "**-manage";
 		String AUTHOR = "wujp";
 		String VERSION = "V1.0";
 
@@ -23,15 +23,15 @@ com.bksuns.mybatis.generator.test.MyGenerator
 		String DATABASE = "test";
 
 		//实体 dao service impl mapper 的相对位置
-		String ENTITY_URL = "com.buybit.wm.entity";
-		String DAO_URL = "com.buybit.wm.dao";
-		String XML_URL = "com.buybit.wm.dao.impl";
-		String SERVICE_URL = "com.buybit.wm.service";
+		String ENTITY_URL = "com.manage.entity";
+		String DAO_URL = "com.manage.dao";
+		String XML_URL = "com.manage.dao.impl";
+		String SERVICE_URL = "com.manage.service";
 		String SERVICE_IMPL_URL = SERVICE_URL+".impl";
-		String CONTROLLER_URL = "com.buybit.wm.web";
+		String CONTROLLER_URL = "com.manage.web";
 
 		//将文件生成到的位置
-		String path = "E:\\a_item_work\\wallet\\wallet-manage\\wallet-manage-web";
+		String path = "E:\\manage";
 
 		// 类信息：类名、表名、类说明
 		String CLASSNAME = "Emp1";
