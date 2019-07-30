@@ -31,6 +31,7 @@ public class FreemarkerUtil {
 	        // 获取模板
 			Template template = configuration.getTemplate(templateName);
 			File file = new File(filePath);
+			System.getProperty("file.separator");
 			if (!file.getParentFile().exists()) {
 				file.getParentFile().mkdirs();
 			}
