@@ -7,7 +7,7 @@
 模板各个文件模板，不符合业务，可自行修改模板 freemarker.ftl
 
 使用时在下面的运行类中修改配置即可
-com.bksuns.mybatis.generator.test.MyGenerator
+org.mybatis.generator.test.MyGenerator
 
 像模板其中的 分页类，JsonResult 的路径，使用时需要改为自己的路径，否则生成的话路径还需要自己在整改，
 	
