@@ -33,7 +33,7 @@ org.mybatis.generator.test.MyGenerator
 		String CONTROLLER_URL = "com.buybit.wm.web";
 
 		//将文件生成到的位置
-		String path = "E:\\a_item_work\\wallet\\wallet-manage\\wallet-manage-web";
+		String path = "E:\\manage";
 
 		// 类信息：类名、表名、类说明
 		String CLASSNAME = "Emp1";
