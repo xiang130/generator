@@ -25,12 +25,12 @@ org.mybatis.generator.test.MyGenerator
 		String DATABASE = "test";
 
 		//实体 dao service impl mapper 的相对位置
-		String ENTITY_URL = "com.buybit.wm.entity";
-		String DAO_URL = "com.buybit.wm.dao";
-		String XML_URL = "com.buybit.wm.dao.impl";
-		String SERVICE_URL = "com.buybit.wm.service";
+		String ENTITY_URL = "com.manage.entity";
+		String DAO_URL = "com.manage.dao";
+		String XML_URL = "mapper";
+		String SERVICE_URL = "com.manage.service";
 		String SERVICE_IMPL_URL = SERVICE_URL+".impl";
-		String CONTROLLER_URL = "com.buybit.wm.web";
+		String CONTROLLER_URL = "com.manage.controller";
 
 		//将文件生成到的位置
 		String path = "E:\\manage";
