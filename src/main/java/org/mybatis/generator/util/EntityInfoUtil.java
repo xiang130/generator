@@ -1,4 +1,4 @@
-package com.bksuns.mybatis.generator.util;
+package org.mybatis.generator.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,8 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bksuns.mybatis.generator.entity.BasisInfo;
-import com.bksuns.mybatis.generator.entity.PropertyInfo;
+import org.mybatis.generator.entity.BasisInfo;
+import org.mybatis.generator.entity.PropertyInfo;
 /**   
  * <p>说明：  链接数据库并获取表信息</P>
  * @version: v1.0.0

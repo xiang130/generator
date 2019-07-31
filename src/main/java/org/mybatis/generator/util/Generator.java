@@ -1,10 +1,10 @@
-package com.bksuns.mybatis.generator.util;
+package org.mybatis.generator.util;
 
 import java.util.List;
 
-import com.bksuns.mybatis.generator.entity.BasisInfo;
-import com.bksuns.mybatis.generator.entity.JsonResult;
-import com.bksuns.mybatis.generator.entity.PropertyInfo;
+import org.mybatis.generator.entity.BasisInfo;
+import org.mybatis.generator.entity.JsonResult;
+import org.mybatis.generator.entity.PropertyInfo;
 
 /**
  * <p>说明：  获取文件路径调用创建文件</P>

@@ -1,11 +1,11 @@
-package com.bksuns.mybatis.generator.util;
+package org.mybatis.generator.util;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import com.bksuns.mybatis.generator.entity.BasisInfo;
-import com.bksuns.mybatis.generator.entity.JsonResult;
+import org.mybatis.generator.entity.BasisInfo;
+import org.mybatis.generator.entity.JsonResult;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

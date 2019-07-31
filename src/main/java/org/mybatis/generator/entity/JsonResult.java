@@ -1,4 +1,4 @@
-package com.bksuns.mybatis.generator.entity;
+package org.mybatis.generator.entity;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.bksuns.mybatis.generator.convert;
+package org.mybatis.generator.convert;
 
 /**
  * Copyright: Copyright (c) 2019

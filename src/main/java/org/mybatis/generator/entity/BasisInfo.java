@@ -1,4 +1,4 @@
-package com.bksuns.mybatis.generator.entity;
+package org.mybatis.generator.entity;
 
 import java.io.Serializable;
 import java.util.List;
@@ -17,7 +17,9 @@ public class BasisInfo implements Serializable{
 	
 	private String author;
 
-	private Boolean other;
+	private Boolean other = false;
+
+	private Boolean business = false;
 
 	private String version;
 	
@@ -268,66 +270,11 @@ public class BasisInfo implements Serializable{
 		this.other = other;
 	}
 
-	@Override
-	public String toString() {
-		return "BasisInfo{" +
-				"project='" + project + '\'' +
-				", author='" + author + '\'' +
-				", other=" + other +
-				", version='" + version + '\'' +
-				", dbUrl='" + dbUrl + '\'' +
-				", dbName='" + dbName + '\'' +
-				", dbPassword='" + dbPassword + '\'' +
-				", database='" + database + '\'' +
-				", table='" + table + '\'' +
-				", entityName='" + entityName + '\'' +
-				", objectName='" + objectName + '\'' +
-				", entityComment='" + entityComment + '\'' +
-				", createTime='" + createTime + '\'' +
-				", agile='" + agile + '\'' +
-				", entityUrl='" + entityUrl + '\'' +
-				", daoUrl='" + daoUrl + '\'' +
-				", mapperUrl='" + mapperUrl + '\'' +
-				", serviceUrl='" + serviceUrl + '\'' +
-				", serviceImplUrl='" + serviceImplUrl + '\'' +
-				", controllerUrl='" + controllerUrl + '\'' +
-				", idType='" + idType + '\'' +
-				", idJdbcType='" + idJdbcType + '\'' +
-				", cis=" + cis +
-				'}';
+	public Boolean getBusiness() {
+		return business;
 	}
 
-	@Override
-	public boolean equals(Object o) {
-		return cis != null ;
-
-	}
-
-	@Override
-	public int hashCode() {
-		int result = project != null ? project.hashCode() : 0;
-		result = 31 * result + (author != null ? author.hashCode() : 0);
-		result = 31 * result + (other != null ? other.hashCode() : 0);
-		result = 31 * result + (version != null ? version.hashCode() : 0);
-		result = 31 * result + (dbUrl != null ? dbUrl.hashCode() : 0);
-		result = 31 * result + (dbName != null ? dbName.hashCode() : 0);
-		result = 31 * result + (dbPassword != null ? dbPassword.hashCode() : 0);
-		result = 31 * result + (database != null ? database.hashCode() : 0);
-		result = 31 * result + (table != null ? table.hashCode() : 0);
-		result = 31 * result + (entityName != null ? entityName.hashCode() : 0);
-		result = 31 * result + (objectName != null ? objectName.hashCode() : 0);
-		result = 31 * result + (entityComment != null ? entityComment.hashCode() : 0);
-		result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
-		result = 31 * result + (agile != null ? agile.hashCode() : 0);
-		result = 31 * result + (entityUrl != null ? entityUrl.hashCode() : 0);
-		result = 31 * result + (daoUrl != null ? daoUrl.hashCode() : 0);
-		result = 31 * result + (mapperUrl != null ? mapperUrl.hashCode() : 0);
-		result = 31 * result + (serviceUrl != null ? serviceUrl.hashCode() : 0);
-		result = 31 * result + (serviceImplUrl != null ? serviceImplUrl.hashCode() : 0);
-		result = 31 * result + (controllerUrl != null ? controllerUrl.hashCode() : 0);
-		result = 31 * result + (idType != null ? idType.hashCode() : 0);
-		result = 31 * result + (idJdbcType != null ? idJdbcType.hashCode() : 0);
-		result = 31 * result + (cis != null ? cis.hashCode() : 0);
-		return result;
+	public void setBusiness(Boolean business) {
+		this.business = business;
 	}
 }

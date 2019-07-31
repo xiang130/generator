@@ -1,7 +1,8 @@
-package com.bksuns.mybatis.generator.util;
+package org.mybatis.generator.util;
 
-import com.bksuns.mybatis.generator.convert.DateType;
-import com.bksuns.mybatis.generator.convert.MySqlTypeConvert;
+import org.mybatis.generator.convert.DateType;
+import org.mybatis.generator.convert.MySqlTypeConvert;
+
 /**
  * <p>说明： 获奖java中需要的驼峰命名</P>
  * @version: v1.0

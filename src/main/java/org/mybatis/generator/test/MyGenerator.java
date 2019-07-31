@@ -1,10 +1,10 @@
-package com.bksuns.mybatis.generator.test;
+package org.mybatis.generator.test;
 
-import com.bksuns.mybatis.generator.entity.BasisInfo;
-import com.bksuns.mybatis.generator.entity.JsonResult;
-import com.bksuns.mybatis.generator.util.EntityInfoUtil;
-import com.bksuns.mybatis.generator.util.Generator;
-import com.bksuns.mybatis.generator.util.MySqlToJavaUtil;
+import org.mybatis.generator.entity.BasisInfo;
+import org.mybatis.generator.entity.JsonResult;
+import org.mybatis.generator.util.EntityInfoUtil;
+import org.mybatis.generator.util.Generator;
+import org.mybatis.generator.util.MySqlToJavaUtil;
 
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -50,8 +50,9 @@ import java.util.Date;
 		//是否生成具体业务 默认不生成
 		Boolean business = true;
 
-
 		String TIME = new SimpleDateFormat("YYYY-MM-dd").format(new Date());
+
+
 		String AGILE = System.currentTimeMillis() + "";
 		
 		BasisInfo bi = new BasisInfo(PROJECT, AUTHOR, VERSION, URL, NAME, PASS, DATABASE, TIME, AGILE, ENTITY_URL,
@@ -61,7 +62,7 @@ import java.util.Date;
 		bi.setObjectName(MySqlToJavaUtil.changeToJavaFiled(TABLE));
 		bi.setEntityComment(CLASSCOMMENT);
 		bi.setOther(isOther);
-		bi.setBusiness(false);
+		bi.setBusiness(business);
 		try {
 			bi = EntityInfoUtil.getInfo(bi);
 			// 生成文件存放位置
