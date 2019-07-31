@@ -45,8 +45,10 @@ import java.util.Date;
 		String TABLE = "emp1";
 		String CLASSCOMMENT = "生成测试";
 
-		//是否生成 toString HashCode equals方法
+		//是否生成 toString HashCode equals方法 默认不生成
 		Boolean isOther = true;
+		//是否生成具体业务 默认不生成
+		Boolean business = true;
 
 
 		String TIME = new SimpleDateFormat("YYYY-MM-dd").format(new Date());
@@ -59,6 +61,7 @@ import java.util.Date;
 		bi.setObjectName(MySqlToJavaUtil.changeToJavaFiled(TABLE));
 		bi.setEntityComment(CLASSCOMMENT);
 		bi.setOther(isOther);
+		bi.setBusiness(false);
 		try {
 			bi = EntityInfoUtil.getInfo(bi);
 			// 生成文件存放位置
@@ -67,22 +70,36 @@ import java.util.Date;
 			JsonResult entity = Generator.createEntity(fileUrl, bi);
 			JsonResult dao = Generator.createDao(fileUrl, bi);
 			JsonResult daoImpl = Generator.createDaoImpl(fileUrl, bi);
-			JsonResult service = Generator.createService(fileUrl, bi);
-			JsonResult serviceImpl = Generator.createServiceImpl(fileUrl, bi);
-			JsonResult controller = Generator.createController(fileUrl, bi);
+
+
 			if (entity.getCode() != 1) {
 				str.append(entity.getMessage());
-			} else if (dao.getCode() != 1) {
-				str.append(dao.getMessage());
-			} else if (daoImpl.getCode() != 1){
-				str.append(daoImpl.getMessage());
-			}else if(service.getCode()!=1) {
-				str.append(service.getMessage());
-			}else if(serviceImpl.getCode()!=1) {
-				str.append(serviceImpl.getMessage());
-			}else if(controller.getCode()!=1) {
-				str.append(controller.getMessage());
 			}
+			if (dao.getCode() != 1) {
+				str.append(dao.getMessage());
+			}
+			if (daoImpl.getCode() != 1){
+				str.append(daoImpl.getMessage());
+			}
+
+
+			if(bi.getBusiness()){
+				JsonResult service = Generator.createService(fileUrl, bi);
+				JsonResult serviceImpl = Generator.createServiceImpl(fileUrl, bi);
+				JsonResult controller = Generator.createController(fileUrl, bi);
+
+				if(service.getCode()!=1) {
+					str.append(service.getMessage());
+				}
+				if(serviceImpl.getCode()!=1) {
+					str.append(serviceImpl.getMessage());
+				}
+				if(controller.getCode()!=1) {
+					str.append(controller.getMessage());
+				}
+			}
+
+
 			System.out.println(str.toString().trim().length()==0?"创建成功":"创建失败："+str.toString());
 		} catch (SQLException e) {
 			e.printStackTrace();
